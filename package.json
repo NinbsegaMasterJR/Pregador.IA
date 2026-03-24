@@ -1,0 +1,131 @@
+{
+  "name": "pregador-ia",
+  "displayName": "Pregador IA",
+  "description": "Assistente de IA para gerar esboços de pregações, sugerir versículos bíblicos e ajudar no preparo de pregações pentecostais",
+  "version": "0.1.0",
+  "packageManager": "npm@11.9.0",
+  "publisher": "DaviTrabalhos",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other",
+    "Education"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pregador-ia.gerarEsboco",
+        "title": "Pregador IA: Gerar Esboço de Pregação",
+        "category": "Pregador IA"
+      },
+      {
+        "command": "pregador-ia.sugerirVersiculos",
+        "title": "Pregador IA: Sugerir Versículos por Tema",
+        "category": "Pregador IA"
+      },
+      {
+        "command": "pregador-ia.explicarPassagem",
+        "title": "Pregador IA: Explicar Passagem Bíblica",
+        "category": "Pregador IA"
+      },
+      {
+        "command": "pregador-ia.criarCronograma",
+        "title": "Pregador IA: Criar Cronograma de Pregações",
+        "category": "Pregador IA"
+      },
+      {
+        "command": "pregador-ia.analisarTeologica",
+        "title": "Pregador IA: Análise Teológica",
+        "category": "Pregador IA"
+      },
+      {
+        "command": "pregador-ia.concordancia",
+        "title": "Pregador IA: Concordância Bíblica",
+        "category": "Pregador IA"
+      },
+      {
+        "command": "pregador-ia.abrirPainel",
+        "title": "Pregador IA: Abrir Painel",
+        "category": "Pregador IA"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pregador-ia-container",
+          "title": "Pregador IA",
+          "icon": "media/pregador-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "pregador-ia-container": [
+        {
+          "id": "pregador-ia-view",
+          "name": "Assistente de Pregações",
+          "type": "webview",
+          "icon": "$(book)"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Pregador IA",
+      "properties": {
+        "pregador-ia.apiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Chave de API para integração com IA (opcional)"
+        },
+        "pregador-ia.idioma": {
+          "type": "string",
+          "enum": [
+            "pt-BR",
+            "pt-PT",
+            "es",
+            "en"
+          ],
+          "default": "pt-BR",
+          "description": "Idioma para gerar pregações"
+        },
+        "pregador-ia.estiloIgreja": {
+          "type": "string",
+          "enum": [
+            "Pentecostal",
+            "Assembléia de Deus",
+            "Foursquare",
+            "Evangélica Genérica"
+          ],
+          "default": "Pentecostal",
+          "description": "Estilo teológico para pregações"
+        },
+        "pregador-ia.tempoMedio": {
+          "type": "number",
+          "default": 30,
+          "description": "Tempo médio de pregação em minutos"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/glob": "^8.1.0",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.32.0",
+    "glob": "^8.1.0",
+    "typescript": "^4.9.4",
+    "@vscode/test-electron": "^2.3.0",
+    "@types/mocha": "^10.0.10"
+  },
+  "dependencies": {}
+}
