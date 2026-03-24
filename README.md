@@ -2,6 +2,10 @@
 
 Extensão do VS Code para auxiliar na preparação de pregações, estudos bíblicos e organização de conteúdo ministerial.
 
+- Repositório: https://github.com/NinbsegaMasterJR/Pregador.IA
+- Linguagem principal: TypeScript
+- Plataforma: Visual Studio Code
+
 ## Recursos
 
 - Geração de esboços de pregação por tema
@@ -23,6 +27,18 @@ Extensão do VS Code para auxiliar na preparação de pregações, estudos bíbl
 ```bash
 npm install
 ```
+
+## Como executar
+
+```bash
+npm run compile
+```
+
+Depois, no VS Code:
+
+1. Abra a pasta do projeto.
+2. Pressione `F5`.
+3. Teste os comandos da extensão na nova janela de desenvolvimento.
 
 ## Scripts
 
@@ -49,12 +65,19 @@ npm run test
 - `Pregador IA: Concordância Bíblica`
 - `Pregador IA: Abrir Painel`
 
+## Configurações da extensão
+
+- `pregador-ia.apiKey`: chave opcional para integração com IA
+- `pregador-ia.idioma`: idioma de geração do conteúdo
+- `pregador-ia.estiloIgreja`: estilo teológico desejado
+- `pregador-ia.tempoMedio`: duração média da pregação em minutos
+
 ## Estrutura
 
 - `src/extension.ts`: ativação da extensão e registro dos comandos
 - `src/pregadorProvider.ts`: painel lateral da extensão
 - `src/commands/`: comandos principais do Pregador IA
 
-## Publicação no GitHub
+## Repositório GitHub
 
-Este projeto foi preparado para um repositório GitHub chamado `Pregador-IA`.
+Projeto publicado em: https://github.com/NinbsegaMasterJR/Pregador.IA
