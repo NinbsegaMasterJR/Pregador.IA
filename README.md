@@ -81,3 +81,7 @@ npm run test
 ## Repositório GitHub
 
 Projeto publicado em: https://github.com/NinbsegaMasterJR/Pregador.IA
+
+## Licença
+
+MIT

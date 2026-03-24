@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "packageManager": "npm@11.9.0",
   "publisher": "DaviTrabalhos",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/NinbsegaMasterJR/Pregador.IA.git"
